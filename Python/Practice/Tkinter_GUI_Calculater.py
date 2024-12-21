@@ -1,36 +1,63 @@
 import tkinter as tk
-#.................................................
-
-#making object for window
+# Create the main window
 root = tk.Tk()
-root.title("This Is Sample")
-root.geometry('400x300')
-root.resizable(0,0)
-root.config(bg="red")
-
-#making new object for input 
-text_result=tk.Entry(root,width=9,bg ="red",fg="white",font=('verdana',40,'bold'),highlightthickness=0,borderwidth=0)
-#only object making doesn't work so we have to tell what tipe of input ,  in this case we are using grid 
-text_result.grid(row=0,column=0,pady=(20,20))
-
-### First Row Button
-btn_ac = tk.Button(root,text='AC',bg="yellow",fg='grey',width=3, height=3)
-btn_ac.grid(row=1,column=0,paddy=(1,1))
-
-### Second Row Button
-btn_negative= tk.Button(root,text='NEG',bg="yellow",fg='grey',height=3,width=3)
-btn_negative.grid(row=1,column=1,paddy=(1,1))
-
-### Third Row Button
-btn_possitive= tk.Button(root,text='NEG',bg="yellow",fg='grey',height=3,width=3)
-btn_possitive.grid(row=1,column=1,paddy=(0,1))
-
-### Forth Row Button
-btn_equalto= tk.Button(root,text='NEG',bg="yellow",fg='grey',height=3,width=3)
-btn_equalto.grid(row=1,column=1)
+root.title("Calculator")
+root.geometry('400x500')  # Adjust size
+root.resizable(0, 0)
 
 
-
-
-# last line of this GUI After this last like whatever you write doesnot affect the GUI interface
+# Configure grid rows and columns for responsiveness
+for i in range(6):  # 6 rows: 1 for input, 5 for buttons
+    root.grid_rowconfigure(i, weight=1)
+    if(i<4):
+        root.grid_columnconfigure(i, weight=1)
+# Variable to store the current expression
+expression = ""
+# Function to handle button clicks
+def button_click(value):
+    global expression
+    if value == "C":
+        expression = ""  # Clear expression
+        text_result.delete(0, tk.END)  # Clear input field
+    elif value == "=":
+        try:
+            result = str(eval(expression))  # Safely evaluate the expression
+            text_result.delete(0, tk.END)
+            text_result.insert(0, result)  # Display the result
+            expression = result  # Store result for further operations
+        except Exception as e:
+            text_result.delete(0, tk.END)
+            text_result.insert(0, "Error")  # Show error for invalid expressions
+            expression = ""
+    else:z
+        expression += value  # Append the button value to the expression
+        text_result.delete(0, tk.END)
+        text_result.insert(0, expression)  # Update the input field
+# Input field spanning 4 columns
+text_result = tk.Entry(
+    root, bg="red", fg="white", font=('verdana', 20, 'bold'),
+    justify="right", borderwidth=5
+)
+text_result.grid(row=0, column=0, columnspan=4, padx=10, pady=20, sticky="nsew")
+# Button layout: List of button labels
+button_labels = [
+    "7", "8", "9", "C",  # Row 1
+    "4", "5", "6", "/",  # Row 2
+    "1", "2", "3", "*",  # Row 3
+    "0", ".", "=", "-",  # Row 4
+    "+"                  # Row 5
+]
+# Create and place buttons
+buttons = []
+for index, label in enumerate(button_labels):
+    row = (index // 4) + 1  # Start at row 1 (input is row 0)
+    column = index % 4      # 4 buttons per row
+    button = tk.Button(
+        root, text=label, bg="yellow", fg="black", font=('verdana', 18, 'bold'),
+        borderwidth=1, relief="raised",
+        command=lambda x=label: button_click(x)  # Pass label to button_click
+    )
+    button.grid(row=row, column=column, padx=5, pady=5, sticky="nsew")
+    buttons.append(button)
+# Run the GUI event loop
 root.mainloop()
