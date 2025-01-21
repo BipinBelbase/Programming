@@ -28,8 +28,14 @@ class stack:
         self.head = newnode 
         self.size = self.size+1
     def pop(self):
-        self.head = self.head.next
-        self.size = self.size - 1
+        if self.head:
+            valuetoreturn = self.head.data 
+            self.head = self.head.next
+            self.size = self.size - 1
+            return valuetoreturn
+        else:
+            print("noting to pop")
+            return
 
     def peak(self):
         print(self.head.data)
@@ -43,18 +49,21 @@ class stack:
             result = result + str(curr.data)+","
             curr = curr.next
         return '['+result[:-1]+']' 
-        
 
-stack = stack()
-stack.push(33)
-stack.push(13)
-stack.push(1)
-stack.push(5)
 
-print(stack.show())
-print("size of stack ",stack.size)
-stack.pop()
-print(stack.show())
-stack.peak()
 
-print("size of stack ",stack.size)
+
+
+check = stack()
+
+check.push(22)
+check.push(33)
+check.push(99)
+
+print(check.show())
+
+check.pop()
+
+print(check.show())
+
+print("poped item is ",check.pop())
