@@ -10,27 +10,28 @@ from stack import stack
 # we maek 2 array and 
 
 list =[
-         [0,1,1,1],
          [0,0,1,1],
+         [0,1,0,1],
          [0,0,0,0],
          [0,0,1,0]
       ]
 #search for one person .. all others know him .. 
+
 def knows(a,b):
             
-            return list[a][b]==0
+            return list[a][b]==1
     
    
       
 
-firststack = stack(list)
+firststack = stack()
 
-for i in list:
+for i in range(len(list)):
     firststack.push(i)
 
 #....................
 
-while len(stack)>1:
+while len(firststack)>1:
     a = firststack.pop()
     b = firststack.pop()
     if knows(a,b):
@@ -44,9 +45,30 @@ lastperson = firststack.pop()
 
 
     # Verify: Candidate must satisfy both conditions
+celeb = ""
 for i in range(len(list)):
     if i !=lastperson:
         if knows(lastperson, i) or not knows(i,lastperson):
-            print("No celebrity found.")
-        
-print(f"Celebrity is person {lastperson}.")
+            celeb = "NOT FOUND"
+
+if celeb == "NOT FOUND":
+     print("Sorry NO celeb is there .. try again")
+     exit
+elif lastperson == 0 :
+    lastperson = "A"
+    print(f"Celebrity is person {lastperson}.")
+elif lastperson == 1 :
+    lastperson = "B"
+    print(f"Celebrity is person {lastperson}.")
+elif lastperson == 2 :
+    lastperson = "C"
+    print(f"Celebrity is person {lastperson}.")
+elif lastperson == 3 :
+    lastperson = "D"
+    print(f"Celebrity is person {lastperson}.")
+else:
+    
+    print(f"Sorry For Now There is no Celebrity there")
+
+
+

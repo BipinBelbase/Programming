@@ -1,40 +1,45 @@
 
 
 
+# queue
+
+
 class Node:
     def __init__(self,data):
         self.data = data
         self.next = None
         
 
-class stack:
+class queue:
     def __init__(self):
         self.head = None
+        self.last = None
         self.size = 0
-    def push(self,data):
-        
-        
+    def enqueue(self,data):
         # if stack is empty
         if self.head == None:
             newnode = Node(data)
             self.head = newnode 
+            self.last = newnode
             self.size = self.size+1
             return
 
         # if stack have the valuees
         newnode = Node(data)
-        newnode.next = self.head
-        self.head = newnode 
+        self.last.next = newnode
+        self.last = newnode
         self.size = self.size+1
-    def pop(self):
+    def dequeue(self):
         if self.head:
             valuetoreturn = self.head.data 
             self.head = self.head.next
             self.size = self.size - 1
             return valuetoreturn
         else:
-            print("noting to pop")
+            print("noting to dequeue")
             return
+        
+   
 
     def __len__(self):
         return self.size
@@ -51,21 +56,27 @@ class stack:
             result = result + str(curr.data)+","
             curr = curr.next
         return '['+result[:-1]+']' 
+    
 
 
 
 
 
-# check = stack()
 
-# check.push(22)
-# check.push(33)
-# check.push(99)
+check = queue()
 
-# print(check.show())
-# print("this is the length of stack",len(check))
-# check.pop()
+check.enqueue(22)
+check.enqueue(33)
+check.enqueue(99)
 
-# print(check.show())
+print(check.show())
+print("this is the length of queue",len(check))
+check.dequeue()
 
-# print("poped item is ",check.pop())
+print(check.show())
+
+print("dequeued  item is ",check.dequeue())
+
+
+
+

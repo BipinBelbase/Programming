@@ -107,7 +107,7 @@ class MeroList:
 
     def __make_arrar(self,capacity):
         # creates a c type array(static, referential) with size capacity
-        return (capasity*ctypes.py_opject)()
+        return (capacity*ctypes.py_opject)()
     
     def __len__(self):
         return self.n

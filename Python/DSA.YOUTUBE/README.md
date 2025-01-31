@@ -82,7 +82,7 @@ topic covered
 06:43:24 Que Recursion MCQs
 
 
-2025-01-18-Saturday
+2025-01-25-Saturday
 06:46:14 Hashing Intuition
 07:03:26 Collisions in Hashing
 07:33:44 Hashing in Python with Linear Probing
@@ -90,70 +90,39 @@ topic covered
 08:46:03 Hashing and load factor
 09:07:27 Hashing deleting accessing traversing
 
-2025-01-19-Sunday
+
+2025-01-26-Sunday
 09:24:04 Linear Search
 09:28:11 Binary Search
-
 09:41:23 Weird sorting algo
 09:51:19 Bubble Sort
 10:25:12 Selection Sort
 10:57:11 Merge Sort
 
-2025-01-20-Monday
-### **Trees**
-
-- **Types**:
-    - Binary Tree, Binary Search Tree (BST).
-    - AVL Tree, Red-Black Tree (self-balancing BST).
-    - B-Trees (used in databases).
-    - Trie (Prefix Tree for strings).
-- **Operations**: Insert, delete, search, traversal (Inorder, Preorder, Postorder).
-- **Advanced Applications**:
-    - Huffman Encoding (Data compression).
-    - Expression Trees.
-    - Interval Trees.
+2025-01-27-Monday
+GUI PYTHON
+heap.....
 
 
 
-2025-01-21-Tuesday
------same as 20
 
+2025-01-28-Tuesday
+read book and type two hours each first.......
+**** Trees ****
 
-
-2025-01-22-Wednesday
-### ** Heaps**
-
-- **Types**: Min-Heap, Max-Heap.
-- **Operations**: Insert, delete, heapify, extract min/max.
-- **Applications**:
-    - Priority queues.
-    - Dijkstra's Algorithm (Shortest Path).
-    - Heap Sort.
-
-
-2025-01-23-thursday
------same as 22
-
-
-2025-01-24-friday
 ### **Graphs**
 
-- **Representation**: Adjacency Matrix, Adjacency List.
-- **Traversal Algorithms**: BFS, DFS.
-- **Shortest Path Algorithms**:
-    - Dijkstra's Algorithm.
-    - Bellman-Ford Algorithm.
-    - Floyd-Warshall Algorithm.
-- **Other Algorithms**:
-    - Minimum Spanning Tree: Kruskal's, Prim's.
-    - Topological Sorting.
-    - Strongly Connected Components (Tarjan's Algorithm).
+YOUTUBE OPEN GL OPERATING SYS
 
 
 
 
+2025-01-29-Wednesday
+Graph and trees 
+and codeforce or leethor nooo JUST DO YOUTUBE DSA QUESTIOINS SOLVING 5 HOURS OR LIKE DSA CONCEPT BUILDING OR GATE WALLAH DSA QUESTIONS OR CODEACADEMY INTERVIEWQUESTIONS OF DSA 
 
-2025-01-25-saturday
+
+.....................
 think also about time complexity 
 leetcode easy questions 
 codeforces (div 3 or 4 for beginner)
@@ -162,18 +131,26 @@ All remaining algorithm to datastructure .. write down all
 - Backtracking: N-Queens, Sudoku Solver.
 
 
-2025-01-26-Sunday
+2025-01-30-Thursday
+  NUmpy.py and advanced numpy
+
+2025-02-02- SUNDAY
+    algorithm and codeacademy interview questions or most common interview questions
+    numpy , pandas , matplot lip all YOUTUBE
+    write down
+
 -Greedy Algorithms: Activity Selection, Huffman Coding.
 - Dynamic Programming: Knapsack, Matrix Chain Multiplication.
-youtube videos ---Operating system and bash scripting
+
 READDDDDDDDDDDDDD BOOOOOOOOOkssssssssss
 
 
 
 
 
-2025-01-27-Monday
-gui in python -- Tkinter......
+
+
+2025-01-30-Friday
 ### **2. Segment Trees and Fenwick Trees**
 
 - **Segment Trees**:
@@ -183,35 +160,38 @@ gui in python -- Tkinter......
     - Range updates and queries in logarithmic time.
 
 
-2025-01-28-Tuesday
-numpy......
 
+
+
+
+2025-01-30-Saturday
 ### **13. Disjoint Set Union (DSU)**
-
 - **Concepts**: Union by Rank, Path Compression.
-- **Applications**:
     - Kruskal's Algorithm.
     - Dynamic connectivity queries.
-
-
-
-2025-01-29-Wednesday
-pandas
-REad books
-
-### **14. Suffix Arrays and Suffix Trees**
-
-- **Applications**:
+ Suffix Arrays and Suffix Trees**
     - Pattern Matching.
     - Longest Repeated Substring.
     - Lexicographical order of substrings.
 
-2025-01-30-Thursday
+
+
+
+
+2025-02-02-Sunday
+pandas...alll..advanced
 YT >> Matpotlip.matpotlip
 read book and finish it .....
 
+2025-02-03,04 .... continued youtube all completed....daily one hourrrr ..
+
+
 READ BOOKS---
 Readers are leaders
+learn das ..
+make python notes .. revised all things
+learn DJANGO WEBDEB 
+LEARN SQL
 study all remaining datastructure and algorithm advanced 
 codeforces questions 
 leetcode questions
