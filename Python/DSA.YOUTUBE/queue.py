@@ -63,19 +63,19 @@ class queue:
 
 
 
-check = queue()
+# check = queue()
 
-check.enqueue(22)
-check.enqueue(33)
-check.enqueue(99)
+# check.enqueue(22)
+# check.enqueue(33)
+# check.enqueue(99)
 
-print(check.show())
-print("this is the length of queue",len(check))
-check.dequeue()
+# print(check.show())
+# print("this is the length of queue",len(check))
+# check.dequeue()
 
-print(check.show())
+# print(check.show())
 
-print("dequeued  item is ",check.dequeue())
+# print("dequeued  item is ",check.dequeue())
 
 
 

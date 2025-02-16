@@ -14,8 +14,8 @@ def subsets(list,summ):
                 eachsubset.append(j)
             
             i = i>>1 
-        if sum(eachsubset) ==summ:
-            sumofk.extend([eachsubset])
+        # if sum(eachsubset) == summ:
+        #     sumofk.extend([eachsubset])
             
         
         result.extend([eachsubset])
@@ -30,6 +30,6 @@ def subsets(list,summ):
 
 
 #drive code
-subset = [1,2,3]
+subset = ["coffee","donuts","time","toffee"]
 sumofk = 1
 print(f"the subsets of {subset} are :",subsets(subset,sumofk))
