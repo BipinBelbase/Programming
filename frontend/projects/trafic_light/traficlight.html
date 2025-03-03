@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trafic_Light</title>
+    <link rel="stylesheet" href="traficlight.css">
+</head>
+<body>
+    <header>
+        <h1>Traffic Light</h1>
+        <div id="body">
+            <div class="circle" id ="circle1"></div>
+            <div class="circle" id ="circle2"></div>
+            <div class="circle" id ="circle3"></div>
+        </div>
+        <div id="pole"></div>
+        <div id="ground"></div>
+        <script>
+            let circles = document.querySelectorAll(".circle");
+            let index = 0;
+    
+            function changeColor() {
+                // Reset all circles to black
+                circles.forEach(circle => circle.style.backgroundColor = ' ');
+                
+                // Change the current circle to white
+                circles[index].style.backgroundColor = "white";
+    
+                // Move to the next circle (loop back to start)
+                index = (index + 1) % circles.length;
+    
+                // Repeat every 5 seconds
+                setTimeout(+changeColor, 500);
+                changeColor();
+            }
+            changeColor();
+            // Start the loop
+           
+        </script>
+
+    </header>
+    <body>
+
+    </body>
+    <footer>
+
+
+    </footer>
+</body>
+</html>
